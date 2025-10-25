@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tài Khoản</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Create account</h2>
+        <form id="signupForm" class="registration-form">
+            
+            <div class="form-group">
+                <label for="username">User Name: <small>(ít nhất 8 ký tự)</small></label>
+                <input type="text" id="username" name="username" required 
+                       placeholder="Tối thiểu 8 ký tự, chỉ chữ, số và _"
+                       minlength="8">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="firstname">First Name: <small>(ít nhất 8 ký tự)</small></label>
+                    <input type="text" id="firstname" name="firstname" required 
+                           placeholder="Tối thiểu 8 ký tự, chỉ chữ cái"
+                           minlength="8">
+                </div>
+                <div class="form-group half-width">
+                    <label for="lastname">Last Name: <small>(ít nhất 8 ký tự)</small></label>
+                    <input type="text" id="lastname" name="lastname" required 
+                           placeholder="Tối thiểu 8 ký tự, chỉ chữ cái"
+                           minlength="8">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required 
+                       placeholder="example@gmail.com">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password: <small>(6 ký tự + chữ hoa/thường + số + ký tự đặc biệt)</small></label>
+                <input type="password" id="password" name="password" required 
+                       placeholder="Có chữ hoa, chữ thường, số và @$!%*?&"
+                       minlength="6">
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" 
+                       placeholder="Địa chỉ của bạn">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group half-width">
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday" required>
+                </div>
+                
+                <div class="form-group half-width">
+                    <label>Gender:</label>
+                    <div class="gender-options">
+                        <input type="radio" id="male" name="gender" value="Male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="Female" required>
+                        <label for="female">Female</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <button type="submit" class="submit-btn" id="submitBtn">Đăng Ký</button>
+            </div>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
