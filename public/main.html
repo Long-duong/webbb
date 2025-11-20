@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookingSystem</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <!-- Hiệu ứng hạt lấp lánh rơi nhẹ -->
+    <div class="sparkles" id="sparkles"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <i class="fas fa-sparkles"></i>
+                    BookingSystem
+                </a>
+                <nav>
+                    <ul>
+                        <li><a href="main.html" class="active">Trang chủ</a></li>
+                        <li><a href="dich-vu.html">Dịch vụ</a></li>
+                        <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+                        <li><a href="lien-he.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+                <div class="auth-buttons">
+                    <a href="signup.html" class="btn btn-signup">Đăng ký</a>
+                    <a href="login.html" class="btn btn-login">Đăng nhập</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Đặt lịch dễ dàng, trải nghiệm tuyệt vời</h1>
+            <p>Tìm kiếm và đặt lịch spa, tiệm cắt tóc, phòng gym gần bạn chỉ trong vài giây.</p>
+
+            <div class="search-box">
+                <div class="select-wrapper">
+                    <i class="fas fa-spa icon"></i>
+                    <select class="search-input">
+                        <option>Spa & Massage</option>
+                        <option>Tiệm cắt tóc</option>
+                        <option>Phòng gym & Yoga</option>
+                        <option>Nail & Thẩm mỹ</option>
+                    </select>
+                </div>
+
+                <div class="date-wrapper">
+                    <i class="fas fa-calendar-alt icon"></i>
+                    <input type="date" class="search-input">
+                </div>
+
+                <button class="btn btn-search">
+                    <i class="fas fa-search"></i> Tìm kiếm ngay
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Script tạo hạt lấp lánh -->
+    <script>
+        const sparklesContainer = document.getElementById('sparkles');
+        for (let i = 0; i < 70; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            sparkle.style.left = Math.random() * 100 + 'vw';
+            sparkle.style.animationDelay = Math.random() * 7 + 's';
+            sparkle.style.animationDuration = (Math.random() * 6 + 6) + 's';
+            sparklesContainer.appendChild(sparkle);
+        }
+    </script>
+
+        <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Cột 1: Logo + mô tả -->
+                <div class="footer-col">
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-sparkles"></i>
+                        BookingSystem
+                    </a>
+                    <p class="footer-desc">
+                        Nền tảng đặt lịch hàng đầu cho sức khỏe<br>và sắc đẹp.
+                    </p>
+                </div>
+
+                <!-- Cột 2: Về chúng tôi -->
+                <div class="footer-col">
+                    <h3>Về chúng tôi</h3>
+                    <ul>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="#">Tuyển dụng</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3: Hỗ trợ -->
+                <div class="footer-col">
+                    <h3>Hỗ trợ</h3>
+                    <ul>
+                        <li><a href="#">Chính sách</a></li>
+                        <li><a href="#">Điều khoản</a></li>
+                        <li><a href="#">Câu hỏi thường gặp</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 4: Kết nối -->
+                <div class="footer-col">
+                    <h3>Kết nối</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Zalo"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 BookingSystem. Tất cả quyền được bảo lưu.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
